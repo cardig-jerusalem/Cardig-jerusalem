@@ -97,7 +97,7 @@ main {
   margin: 0 auto;
   width: 100%;
   padding: 0 10px;
-  min-height: 200px; /* Ensure container has height even with hidden cards */
+  min-height: 200px;
 }
 
 /* Card styling */
@@ -111,7 +111,7 @@ main {
   padding: 15px;
   width: 200px;
   text-align: center;
-  transition: transform 0.2s;
+  transition: opacity 0.3s ease, visibility 0.3s ease, height 0.3s ease, margin 0.3s ease, transform 0.2s;
 }
 
 .card:hover {
@@ -161,7 +161,7 @@ footer {
   width: 100%;
 }
 
-/* Responsive design */
+/* Responsive design for mobile */
 @media (max-width: 600px) {
   .controls {
     flex-direction: column;
@@ -189,5 +189,29 @@ footer {
 
   .division h2 {
     font-size: 1.5em;
+  }
+}
+
+/* Responsive design for iPad (portrait and landscape) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .card-container {
+    gap: 30px; /* Increase gap for better spacing on iPad */
+  }
+
+  .card {
+    width: 220px; /* Slightly larger cards for iPad */
+  }
+
+  .card img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .controls {
+    justify-content: space-between;
+  }
+
+  #search {
+    width: 250px;
   }
 }
