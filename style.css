@@ -409,3 +409,97 @@ footer.site-footer a:hover {
     height: 130px;
   }
 }
+
+/* CSS Additions for Specific Pages */
+
+/* Homepage Styles */
+.hero {
+  text-align: center;
+  color: #fff;
+}
+.hero .intro {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.custom-list-icon li {
+  position: relative;
+  padding-left: 20px;
+}
+.custom-list-icon li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #313131;
+}
+
+/* Cardioscience and Cardiosupport Subsections */
+.subsections h3 {
+  color: #313131;
+  margin-top: 30px;
+}
+
+/* Events Page Styles */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.event-img {
+  max-width: 300px;
+  height: auto;
+  margin: 10px 0;
+}
+
+/* Contact Page Styles */
+form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+.map {
+  height: 300px;
+  margin: 20px 0;
+}
+
+/* Button Styles (from main.css) */
+.btn {
+  border: 0;
+  border-radius: 0;
+  padding: 6px 28px;
+  text-transform: uppercase;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+}
+.btn:hover {
+  -webkit-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  transform: scale(0.9);
+}
+.btn-black {
+  color: #fff;
+  background-color: #000;
+}
+.btn-black:hover {
+  color: #fff;
+  background-color: #000;
+}
+.btn-white {
+  color: #000;
+  background-color: #fff;
+}
+.btn-white:hover {
+  color: #000;
+  background-color: #fff;
+}
