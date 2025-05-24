@@ -8,138 +8,34 @@
   <script src="script.js" defer></script>
 </head>
 <body>
-  <header class="site-header">
-    <div class="site-branding">
-      <img src="images/CARDIG-WEB-HOME-LOGO.jpeg" alt="CARDIG-Jerusalem Logo" class="logo">
-      <h1 class="font-700">CARDIG-Jerusalem</h1>
+  <header class="banner">
+    <div class="banner-content">
+      <img src="/images/CARDIG-WEB-HOME-LOGO.jpeg" alt="CARDIG-Jerusalem Logo" class="banner-logo">
+      <h1 class="banner-title">Cardiology Interest Group <em>of</em> Jerusalem</h1>
     </div>
+    <div class="global-search">
+      <input type="text" id="global-search" placeholder="Search the website..." />
+    </div>
+  </header>
+
+  <header class="site-header">
     <nav class="navbar-custom">
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="team.html">Team</a></li>
-        <li><a href="cardioscience.html">Cardioscience</a></li>
-        <li><a href="cardiosupport.html">Cardiosupport</a></li>
-        <li><a href="events.html">Events</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="about.html">About Us</a></li>
+        <li><a href="/index.html" data-section="home">Home</a></li>
+        <li><a href="/team.html" data-section="team-section">Team</a></li>
+        <li><a href="/cardioscience.html" data-section="cardioscience-section">Cardioscience</a></li>
+        <li><a href="/cardiosupport.html" data-section="cardiosupport-section">Cardiosupport</a></li>
+        <li><a href="/events.html" data-section="events-section">Events</a></li>
+        <li><a href="/contact.html" data-section="contact-section">Contact</a></li>
+        <li><a href="/about.html" data-section="about-section">About Us</a></li>
       </ul>
     </nav>
   </header>
 
-  <div class="controls">
-    <div class="filters">
-      <button class="filter-btn active" data-target="all">All</button>
-      <button class="filter-btn" data-target="executive">Executive Board</button>
-      <button class="filter-btn" data-target="science">Cardioscience</button>
-      <button class="filter-btn" data-target="support">Cardiosupport</button>
-    </div>
-    <input type="text" id="search" placeholder="Search team members..." />
-  </div>
-
   <main class="section">
-    <!-- Executive Board -->
-    <section class="division executive">
-      <h2 class="section-title">Executive Board</h2>
-      <div class="card-container">
-        <div class="card">
-          <img src="https://raw.githubusercontent.com/cardig-jerusalem/Cardig-jerusalem/main/Salem.jpeg" alt="Salem Qupp" />
-          <h3>External President</h3>
-          <p class="name">Salem Qupp</p>
-          <a href="mailto:president-ext@cardig.me">president-ext@cardig.me</a>
-        </div>
-        <div class="card">
-          <img src="https://raw.githubusercontent.com/cardig-jerusalem/Cardig-jerusalem/main/Zain.jpeg" alt="ZainEdeen Zyadah" />
-          <h3>Internal President</h3>
-          <p class="name">ZainEdeen Zyadah</p>
-          <a href="mailto:president-int@cardig.me">president-int@cardig.me</a>
-        </div>
-        <div class="card">
-          <img src="https://raw.githubusercontent.com/cardig-jerusalem/Cardig-jerusalem/main/Seham.jpeg" alt="Seham Madaka" />
-          <h3>Vice President</h3>
-          <p class="name">Seham Madaka</p>
-          <a href="mailto:vicepresident@cardig.me">vicepresident@cardig.me</a>
-        </div>
-        <div class="card">
-          <img src="https://raw.githubusercontent.com/cardig-jerusalem/Cardig-jerusalem/main/Ihab.jpeg" alt="Ihab Hemieid" />
-          <h3>Secretary General</h3>
-          <p class="name">Ihab Hemieid</p>
-          <a href="mailto:secretary@cardig.me">secretary@cardig.me</a>
-        </div>
-        <div class="card">
-          <img src="https://raw.githubusercontent.com/cardig-jerusalem/Cardig-jerusalem/main/Lana.jpeg" alt="Lana Helal" />
-          <h3>Treasurer</h3>
-          <p class="name">Lana Helal</p>
-          <a href="mailto:treasurer@cardig.me">treasurer@cardig.me</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Cardioscience Division -->
-    <section class="division science">
-      <h2 class="section-title">Cardioscience Division</h2>
-      <div class="card-container">
-        <div class="card">
-          <img src="https://raw.githubusercontent.com/cardig-jerusalem/Cardig-jerusalem/main/Shweiki.jpeg" alt="Mohammad Shweiki" />
-          <h3>Cardiology Education Officer (CaEO)</h3>
-          <p class="name">Mohammad Shweiki</p>
-          <a href="mailto:caeo@sci.cardig.me">caeo@sci.cardig.me</a>
-        </div>
-        <div class="card">
-          <img src="https://raw.githubusercontent.com/cardig-jerusalem/Cardig-jerusalem/main/Elie.jpeg" alt="Elie Malki" />
-          <h3>Cardiology Research Officer (CaRO)</h3>
-          <p class="name">Elie Malki</p>
-          <a href="mailto:caro@sci.cardig.me">caro@sci.cardig.me</a>
-        </div>
-        <div class="card">
-          <img src="https://raw.githubusercontent.com/cardig-jerusalem/Cardig-jerusalem/main/Joyce.jpeg" alt="Joyce Morcos" />
-          <h3>Cardiology Skills Officer (CaSO)</h3>
-          <p class="name">Joyce Morcos</p>
-          <a href="mailto:caso@sci.cardig.me">caso@sci.cardig.me</a>
-        </div>
-        <div class="card">
-          <img src="https://raw.githubusercontent.com/cardig-jerusalem/Cardig-jerusalem/main/Yaman.jpeg" alt="Yaman Ayasa" />
-          <h3>Cardiology Journal Club Officer (CaJO)</h3>
-          <p class="name">Yaman Ayasa</p>
-          <a href="mailto:cajo@sci.cardig.me">cajo@sci.cardig.me</a>
-        </div>
-        <div class="card">
-          <img src="https://raw.githubusercontent.com/cardig-jerusalem/Cardig-jerusalem/main/Asad.jpeg" alt="Asad Omari" />
-          <h3>Cardiology Guidelines Officer (CaGO)</h3>
-          <p class="name">Asad Omari</p>
-          <a href="mailto:cago@sci.cardig.me">cago@sci.cardig.me</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Cardiosupport Division -->
-    <section class="division support">
-      <h2 class="section-title">Cardiosupport Division</h2>
-      <div class="card-container">
-        <div class="card">
-          <img src="https://raw.githubusercontent.com/cardig-jerusalem/Cardig-jerusalem/main/Raddad.jpeg" alt="Mohammad Raddad" />
-          <h3>Cardiology Projects Officer (CaPO)</h3>
-          <p class="name">Mohammad Raddad</p>
-          <a href="mailto:capo@sup.cardig.me">capo@sup.cardig.me</a>
-        </div>
-        <div class="card">
-          <img src="https://raw.githubusercontent.com/cardig-jerusalem/Cardig-jerusalem/main/Reem.jpeg" alt="Reem Bzoor" />
-          <h3>Cardiology Brand Officer (CaBO)</h3>
-          <p class="name">Reem Bzoor</p>
-          <a href="mailto:cabo@sup.cardig.me">cabo@sup.cardig.me</a>
-        </div>
-        <div class="card">
-          <img src="https://raw.githubusercontent.com/cardig-jerusalem/Cardig-jerusalem/main/Hala.jpeg" alt="Hala Hamri" />
-          <h3>Cardiology Members Officer (CaMO)</h3>
-          <p class="name">Hala Hamri</p>
-          <a href="mailto:camo@sup.cardig.me">camo@sup.cardig.me</a>
-        </div>
-        <div class="card">
-          <img src="https://raw.githubusercontent.com/cardig-jerusalem/Cardig-jerusalem/main/Rami.jpeg" alt="Rami Muallem" />
-          <h3>Cardiology Technical Officer (CaTO)</h3>
-          <p class="name">Rami Muallem</p>
-          <a href="mailto:cato@sup.cardig.me">cato@sup.cardig.me</a>
-        </div>
-      </div>
+    <section class="division">
+      <h2 class="section-title">Our Team</h2>
+      <p>This is the Team page. Add your team members here.</p>
     </section>
   </main>
 
