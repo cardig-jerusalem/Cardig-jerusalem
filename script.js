@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
       filterButtons.forEach(btn => btn.classList.remove("active"));
       button.classList.add("active");
 
-      // Force layout recalculation to maintain centering
+      // Force layout recalculation
       setTimeout(() => window.dispatchEvent(new Event("resize")), 0);
     });
   });
@@ -32,10 +32,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
     cards.forEach(card => {
       const text = card.innerText.toLowerCase();
-      card.style.display = text.includes(searchTerm) ? "flex" : "none"; // Use 'flex' to maintain layout context
+      if (text.includes(searchTerm)) {
+        card.style.opacity = "1";
+        card.style.visibility = "visible";
+        card.style.height = "auto"; // Ensure card takes up space
+      } else {
+        card.style.opacity = "0";
+        card.style.visibility = "hidden";
+        card.style.height = "0"; // Collapse height but keep width for centering
+        card.style.margin = "0"; // Remove margins to avoid gaps
+      }
     });
 
-    // Force layout recalculation to maintain centering
+    // Force layout recalculation
     setTimeout(() => window.dispatchEvent(new Event("resize")), 0);
   });
 
