@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>CARDIG-Jerusalem - [Page Title]</title>
+  <title>CARDIG-Jerusalem - Home</title>
   <link rel="stylesheet" href="style.css" />
   <script src="script.js" defer></script>
 </head>
@@ -26,24 +26,35 @@
     </nav>
   </header>
 
-  <div class="controls">
-    <div class="filters">
-      <button class="filter-btn active" data-target="all">All</button>
-      <button class="filter-btn" data-target="executive">Executive Board</button>
-      <button class="filter-btn" data-target="science">Cardioscience</button>
-      <button class="filter-btn" data-target="support">Cardiosupport</button>
-    </div>
-    <input type="text" id="search" placeholder="Search team members..." />
-  </div>
-
   <main class="section">
-    <!-- Page-specific content will go here -->
+    <section class="division hero">
+      <h2 class="section-title">Welcome to CARDIG-Jerusalem</h2>
+      <p class="intro">Empowering cardiology through education and innovation.</p>
+      <div class="buttons">
+        <a href="#mission" class="btn btn-black mt20">Learn More</a>
+        <a href="contact.html" class="btn btn-white mt20">Contact Us</a>
+      </div>
+    </section>
+    <section class="division" id="mission">
+      <h2 class="section-title">Mission, Vision & Values</h2>
+      <p>Our mission is to advance cardiology education and research at Al-Quds University, fostering a community of dedicated learners and professionals.</p>
+      <ul class="custom-list-icon">
+        <li>Mission: Educate and inspire the next generation of cardiologists.</li>
+        <li>Vision: Become global leaders in cardiovascular health.</li>
+        <li>Values: Integrity, collaboration, and excellence.</li>
+      </ul>
+      <div class="buttons">
+        <a href="team.html" class="btn btn-black mt20">Meet the Team</a>
+        <a href="events.html" class="btn btn-white mt20">View Events</a>
+        <a href="contact.html" class="btn btn-black mt20">Join Us</a>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
     <p class="site-info">© 2025 CARDIG-Jerusalem | <a href="mailto:contact@cardig.me">contact@cardig.me</a></p>
     <ul class="social-block">
-      <li><a href="#"><i class="icon">f</i></a></li> <!-- Replace with actual social icons -->
+      <li><a href="#"><i class="icon">f</i></a></li>
       <li><a href="#"><i class="icon">t</i></a></li>
       <li><a href="#"><i class="icon">i</i></a></li>
     </ul>
