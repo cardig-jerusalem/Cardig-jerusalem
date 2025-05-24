@@ -2,52 +2,183 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="description" content="Cardiology Interest Group of Jerusalem (CARDIG) - Al-Quds University, recognized by the American College of Cardiology (ACC). Promoting cardiovascular education and community health." />
+  <meta name="keywords" content="CARDIG, Cardiology, Jerusalem, Al-Quds University, ACC, Medical Students" />
   <title>CARDIG – Jerusalem</title>
-  <link rel="stylesheet" href="style.css"/>
-  <link rel="icon" type="image/png" href="CARDIG-WEB-HOME-LOGO.jpeg"/>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="CARDIG-WEB-HOME-LOGO.jpeg" />
 </head>
 <body>
   <header>
-    <img src="CARDIG-WEB-HOME-LOGO.jpeg" alt="CARDIG Logo" class="logo"/>
-    <h1>CARDIG – Jerusalem</h1>
-    <p>Al-Quds University | <a href="https://www.google.com/maps/place/Al-Quds+University/data=!4m2!3m1!1s0x0:0xc87162fd94f22a48?sa=X&ved=1t:2428&hl=en-ps&ictx=111" target="_blank">Location</a></p>
+    <nav class="navbar">
+      <div class="logo-container">
+        <img src="CARDIG-WEB-HOME-LOGO.jpeg" alt="CARDIG Logo" class="logo" />
+        <h1>CARDIG – Jerusalem</h1>
+      </div>
+      <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#mission-vision">Mission & Vision</a></li>
+        <li><a href="#executive">Executive Board</a></li>
+        <li><a href="#cardioscience">Cardioscience</a></li>
+        <li><a href="#cardiosupport">Cardiosupport</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#join">Join Us</a></li>
+      </ul>
+    </nav>
+    <p class="location">Al-Quds University | <a href="https://www.google.com/maps/place/Al-Quds+University/data=!4m2!3m1!1s0x0:0xc87162fd94f22a48?sa=X&ved=1t:2428&hl=en-ps&ictx=111" target="_blank">Location</a></p>
   </header>
 
-  <section>
+  <section id="home">
+    <h2>Welcome to CARDIG-Jerusalem</h2>
+    <p>Promoting excellence in cardiovascular education, research, and community service at Al-Quds University, recognized by the American College of Cardiology (ACC).</p>
+    <button class="cta-button" onclick="window.location.href='#join'">Join Us</button>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>The Cardiology Interest Group of Jerusalem (CARDIG-Jerusalem) is a student organization under the Faculty of Medicine at Al-Quds University, proudly affiliated with the American College of Cardiology (ACC). Our headquarters are located at Al-Quds University, where we strive to advance cardiovascular education, research, and community outreach.</p>
+  </section>
+
+  <section id="mission-vision">
+    <h2>Mission & Vision</h2>
+    <div class="mission-vision-container">
+      <div class="mission">
+        <h3>Our Mission</h3>
+        <p>We are dedicated to advancing the study and practice of cardiovascular medicine through education, training, and research. We nurture leadership among medical students, elevate community health through outreach, and uphold the highest ethical standards in medicine.</p>
+      </div>
+      <div class="vision">
+        <h3>Our Vision</h3>
+        <p>We aspire to be the leading center for cardiovascular scholarship at Al-Quds University, cultivating skilled and compassionate cardiologists who will advance medical knowledge and public welfare in Palestine and beyond.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="executive">
     <h2>Executive Board</h2>
     <div class="card-container">
-      <div class="card"><img src="Salem.jpeg"/><h3>Salem Qupp</h3><p>External President</p><p>president-ext@cardig.me</p></div>
-      <div class="card"><img src="Zain.jpeg"/><h3>ZainEdeen Zyadah</h3><p>Internal President</p><p>president-int@cardig.me</p></div>
-      <div class="card"><img src="Seham.jpeg"/><h3>Seham Madaka</h3><p>Vice President</p><p>vicepresident@cardig.me</p></div>
-      <div class="card"><img src="Ihab.jpeg"/><h3>Ihab Hemieid</h3><p>Secretary General</p><p>secretary@cardig.me</p></div>
-      <div class="card"><img src="Lana.jpeg"/><h3>Lana Helal</h3><p>Treasurer</p><p>treasurer@cardig.me</p></div>
+      <div class="card" aria-label="Salem Qupp - External President">
+        <img src="Salem.jpeg" alt="Salem Qupp" loading="lazy" />
+        <h3>Salem Qupp</h3>
+        <p>External President</p>
+        <p><a href="mailto:president-ext@cardig.me">president-ext@cardig.me</a></p>
+      </div>
+      <div class="card" aria-label="ZainEdeen Zyadah - Internal President">
+        <img src="Zain.jpeg" alt="ZainEdeen Zyadah" loading="lazy" />
+        <h3>ZainEdeen Zyadah</h3>
+        <p>Internal President</p>
+        <p><a href="mailto:president-int@cardig.me">president-int@cardig.me</a></p>
+      </div>
+      <div class="card" aria-label="Seham Madaka - Vice President">
+        <img src="Seham.jpeg" alt="Seham Madaka" loading="lazy" />
+        <h3>Seham Madaka</h3>
+        <p>Vice President</p>
+        <p><a href="mailto:vicepresident@cardig.me">vicepresident@cardig.me</a></p>
+      </div>
+      <div class="card" aria-label="Ihab Hemieid - Secretary General">
+        <img src="Ihab.jpeg" alt="Ihab Hemieid" loading="lazy" />
+        <h3>Ihab Hemieid</h3>
+        <p>Secretary General</p>
+        <p><a href="mailto:secretary@cardig.me">secretary@cardig.me</a></p>
+      </div>
+      <div class="card" aria-label="Lana Helal - Treasurer">
+        <img src="Lana.jpeg" alt="Lana Helal" loading="lazy" />
+        <h3>Lana Helal</h3>
+        <p>Treasurer</p>
+        <p><a href="mailto:treasurer@cardig.me">treasurer@cardig.me</a></p>
+      </div>
     </div>
   </section>
 
-  <section>
+  <section id="cardioscience">
     <h2>Cardioscience Division</h2>
     <div class="card-container">
-      <div class="card"><img src="Shweiki.jpeg"/><h3>Mohammad Shweiki</h3><p>Cardiology Education Officer (CaEO)</p><p>caeo@sci.cardig.me</p></div>
-      <div class="card"><img src="Elie.png"/><h3>Elie Malki</h3><p>Cardiology Research Officer (CaRO)</p><p>caro@sci.cardig.me</p></div>
-      <div class="card"><img src="Joyce.jpeg"/><h3>Joyce Morcos</h3><p>Cardiology Skills Officer (CaSO)</p><p>caso@sci.cardig.me</p></div>
-      <div class="card"><img src="Yaman.jpeg"/><h3>Yaman Ayasa</h3><p>Cardiology Journal Club Officer (CaJO)</p><p>cajo@sci.cardig.me</p></div>
-      <div class="card"><img src="Asad.jpeg"/><h3>Asad Omari</h3><p>Cardiology Guidelines Officer (CaGO)</p><p>cago@sci.cardig.me</p></div>
+      <div class="card" aria-label="Mohammad Shweiki - Cardiology Education Officer">
+        <img src="Shweiki.jpeg" alt="Mohammad Shweiki" loading="lazy" />
+        <h3>Mohammad Shweiki</h3>
+        <p>Cardiology Education Officer (CaEO)</p>
+        <p><a href="mailto:caeo@sci.cardig.me">caeo@sci.cardig.me</a></p>
+      </div>
+      <div class="card" aria-label="Elie Malki - Cardiology Research Officer">
+        <img src="Elie.png" alt="Elie Malki" loading="lazy" />
+        <h3>Elie Malki</h3>
+        <p>Cardiology Research Officer (CaRO)</p>
+        <p><a href="mailto:caro@sci.cardig.me">caro@sci.cardig.me</a></p>
+      </div>
+      <div class="card" aria-label="Joyce Morcos - Cardiology Skills Officer">
+        <img src="Joyce.jpeg" alt="Joyce Morcos" loading="lazy" />
+        <h3>Joyce Morcos</h3>
+        <p>Cardiology Skills Officer (CaSO)</p>
+        <p><a href="mailto:caso@sci.cardig.me">caso@sci.cardig.me</a></p>
+      </div>
+      <div class="card" aria-label="Yaman Ayasa - Cardiology Journal Club Officer">
+        <img src="Yaman.jpeg" alt="Yaman Ayasa" loading="lazy" />
+        <h3>Yaman Ayasa</h3>
+        <p>Cardiology Journal Club Officer (CaJO)</p>
+        <p><a href="mailto:cajo@sci.cardig.me">cajo@sci.cardig.me</a></p>
+      </div>
+      <div class="card" aria-label="Asad Omari - Cardiology Guidelines Officer">
+        <img src="Asad.jpeg" alt="Asad Omari" loading="lazy" />
+        <h3>Asad Omari</h3>
+        <p>Cardiology Guidelines Officer (CaGO)</p>
+        <p><a href="mailto:cago@sci.cardig.me">cago@sci.cardig.me</a></p>
+      </div>
     </div>
   </section>
 
-  <section>
+  <section id="cardiosupport">
     <h2>Cardiosupport Division</h2>
     <div class="card-container">
-      <div class="card"><img src="Raddad.jpeg"/><h3>Mohammad Raddad</h3><p>Cardiology Projects Officer (CaPO)</p><p>capo@sup.cardig.me</p></div>
-      <div class="card"><img src="Reem.jpeg"/><h3>Reem Bzoor</h3><p>Cardiology Brand Officer (CaBO)</p><p>cabo@sup.cardig.me</p></div>
-      <div class="card"><img src="Hala.jpeg"/><h3>Hala Hamri</h3><p>Cardiology Members Officer (CaMO)</p><p>camo@sup.cardig.me</p></div>
-      <div class="card"><img src="Rami.jpeg"/><h3>Rami Muallem</h3><p>Cardiology Technical Officer (CaTO)</p><p>cato@sup.cardig.me</p></div>
+      <div class="card" aria-label="Mohammad Raddad - Cardiology Projects Officer">
+        <img src="Raddad.jpeg" alt="Mohammad Raddad" loading="lazy" />
+        <h3>Mohammad Raddad</h3>
+        <p>Cardiology Projects Officer (CaPO)</p>
+        <p><a href="mailto:capo@sup.cardig.me">capo@sup.cardig.me</a></p>
+      </div>
+      <div class="card" aria-label="Reem Bzoor - Cardiology Brand Officer">
+        <img src="Reem.jpeg" alt="Reem Bzoor" loading="lazy" />
+        <h3>Reem Bzoor</h3>
+        <p>Cardiology Brand Officer (CaBO)</p>
+        <p><a href="mailto:cabo@sup.cardig.me">cabo@sup.cardig.me</a></p>
+      </div>
+      <div class="card" aria-label="Hala Hamri - Cardiology Members Officer">
+        <img src="Hala.jpeg" alt="Hala Hamri" loading="lazy" />
+        <h3>Hala Hamri</h3>
+        <p>Cardiology Members Officer (CaMO)</p>
+        <p><a href="mailto:camo@sup.cardig.me">camo@sup.cardig.me</a></p>
+      </div>
+      <div class="card" aria-label="Rami Muallem - Cardiology Technical Officer">
+        <img src="Rami.jpeg" alt="Rami Muallem" loading="lazy" />
+        <h3>Rami Muallem</h3>
+        <p>Cardiology Technical Officer (CaTO)</p>
+        <p><a href="mailto:cato@sup.cardig.me">cato@sup.cardig.me</a></p>
+      </div>
     </div>
+  </section>
+
+  <section id="events">
+    <h2>Events & Activities</h2>
+    <p>We organize at least four educational seminars and two research symposia annually, alongside three community service events per semester focused on cardiovascular health.</p>
+    <div class="github-feed">
+      <h3>Recent GitHub Activity</h3>
+      <ul id="github-activity"></ul>
+    </div>
+  </section>
+
+  <section id="join">
+    <h2>Join Us</h2>
+    <p>We welcome medical students and interns at Al-Quds University with a passion for cardiology and a minimum GPA of 2.5/4.0. Contact our Cardiology Members Officer to apply!</p>
+    <p>Email: <a href="mailto:camo@sup.cardig.me">camo@sup.cardig.me</a></p>
   </section>
 
   <footer>
+    <button id="dark-mode-toggle" aria-label="Toggle Dark Mode">🌙 Toggle Dark Mode</button>
     <p>Faculty Advisor: <em>To be announced</em></p>
+    <p>© 2025 CARDIG-Jerusalem | Recognized by the American College of Cardiology (ACC)</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
