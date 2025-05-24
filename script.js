@@ -85,6 +85,27 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  // NAVIGATION LINKS HANDLING
+  const navLinks = document.querySelectorAll(".nav-links a");
+  navLinks.forEach(link => {
+    link.addEventListener("click", function (event) {
+      event.preventDefault();
+      const href = this.getAttribute("href");
+      console.log("Nav link clicked:", this.textContent, "href:", href);
+      if (href) {
+        window.location.href = href;
+      }
+    });
+    link.addEventListener("touchstart", function (event) {
+      event.preventDefault();
+      const href = this.getAttribute("href");
+      console.log("Nav touch clicked:", this.textContent, "href:", href);
+      if (href) {
+        window.location.href = href;
+      }
+    });
+  });
+
   // CARD CLICK FEEDBACK
   const cards = document.querySelectorAll(".card");
   cards.forEach(card => {
