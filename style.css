@@ -83,3 +83,42 @@ main {
     align-items: center;
   }
 }
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem;
+  gap: 1rem;
+}
+
+.filters {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.filter-btn {
+  background-color: white;
+  border: 2px solid #092952;
+  color: #092952;
+  padding: 0.4rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: Georgia, serif;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+  background-color: #092952;
+  color: white;
+}
+
+#search {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  width: 250px;
+}
