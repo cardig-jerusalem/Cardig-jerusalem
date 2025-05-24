@@ -18,6 +18,9 @@ document.addEventListener("DOMContentLoaded", function () {
       // Highlight active button
       filterButtons.forEach(btn => btn.classList.remove("active"));
       button.classList.add("active");
+
+      // Force layout recalculation to maintain centering
+      setTimeout(() => window.dispatchEvent(new Event("resize")), 0);
     });
   });
 
@@ -29,8 +32,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     cards.forEach(card => {
       const text = card.innerText.toLowerCase();
-      card.style.display = text.includes(searchTerm) ? "block" : "none";
+      card.style.display = text.includes(searchTerm) ? "flex" : "none"; // Use 'flex' to maintain layout context
     });
+
+    // Force layout recalculation to maintain centering
+    setTimeout(() => window.dispatchEvent(new Event("resize")), 0);
   });
 
   // CARD CLICK FEEDBACK (example)
