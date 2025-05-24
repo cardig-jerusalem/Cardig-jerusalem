@@ -76,8 +76,13 @@ main {
 /* Section styling */
 .division {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0 auto 40px auto; /* Add spacing between sections */
   padding: 0 10px;
+}
+
+/* Remove margin-bottom from the last section to avoid extra space at the bottom */
+.division:last-child {
+  margin-bottom: 0;
 }
 
 .division h2 {
@@ -92,7 +97,7 @@ main {
 .card-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 30px; /* Increased gap for less crowding */
   justify-content: center;
   margin: 0 auto;
   width: 100%;
@@ -109,7 +114,7 @@ main {
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   padding: 15px;
-  width: 200px;
+  width: 200px; /* Base width for cards */
   text-align: center;
   transition: opacity 0.3s ease, visibility 0.3s ease, height 0.3s ease, margin 0.3s ease, transform 0.2s;
 }
@@ -190,16 +195,33 @@ footer {
   .division h2 {
     font-size: 1.5em;
   }
+
+  .division {
+    margin-bottom: 30px;
+  }
 }
 
 /* Responsive design for iPad (portrait and landscape) */
 @media (min-width: 601px) and (max-width: 1024px) {
   .card-container {
-    gap: 30px; /* Increase gap for better spacing on iPad */
+    gap: 40px; /* Increased gap for iPad */
+    /* Force a 2x3 layout: 2 cards in first row, 3 in second row */
+    justify-content: center;
+    max-width: 700px; /* Fits 2 cards (220px each) + gap */
   }
 
   .card {
-    width: 220px; /* Slightly larger cards for iPad */
+    width: 220px;
+    flex: 0 0 calc(50% - 20px); /* 2 cards per row (50% width minus half the gap) */
+  }
+
+  /* Force the first two cards to take the top row, and the next three to take the bottom row */
+  .card:nth-child(-n+2) {
+    flex: 0 0 calc(50% - 20px); /* First two cards take 50% each */
+  }
+
+  .card:nth-child(n+3) {
+    flex: 0 0 calc(33.33% - 27px); /* Next three cards take 33.33% each */
   }
 
   .card img {
@@ -213,5 +235,27 @@ footer {
 
   #search {
     width: 250px;
+  }
+
+  .division {
+    margin-bottom: 40px;
+  }
+}
+
+/* Larger screens */
+@media (min-width: 1025px) {
+  .card-container {
+    gap: 40px;
+    max-width: 1200px;
+  }
+
+  .card {
+    width: 220px;
+    flex: 0 0 calc(20% - 32px); /* 5 cards per row on large screens */
+  }
+
+  .card img {
+    width: 180px;
+    height: 180px;
   }
 }
