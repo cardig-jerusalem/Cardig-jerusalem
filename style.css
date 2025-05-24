@@ -75,8 +75,8 @@ main {
 
 /* Section styling */
 .division {
-  max-width: 1000px; /* Adjusted for better fit on iPad */
-  margin: 0 auto 50px auto; /* Increased spacing between sections */
+  max-width: 900px; /* Adjusted for iPad Pro 11-inch */
+  margin: 0 auto 50px auto; /* Spacing between sections */
   padding: 0 10px;
 }
 
@@ -96,12 +96,13 @@ main {
 /* Card container */
 .card-container {
   display: flex;
-  flex-wrap: wrap;
-  gap: 30px; /* Adjusted gap for spacing */
-  justify-content: center;
-  margin: 0 auto;
-  width: 100%;
+  flex-wrap: nowrap; /* Prevent wrapping for horizontal scrolling */
+  gap: 20px; /* Space between cards */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  scroll-snap-type: x mandatory; /* Smooth snapping behavior */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
   padding: 0 10px;
+  width: 100%;
   min-height: 200px;
 }
 
@@ -114,7 +115,9 @@ main {
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   padding: 15px;
-  width: 200px; /* Reduced width for better fit */
+  width: 180px; /* Fixed width for cards */
+  flex: 0 0 180px; /* Prevent cards from stretching */
+  scroll-snap-align: start; /* Snap cards to start of viewport */
   text-align: center;
   transition: transform 0.2s;
 }
@@ -125,8 +128,8 @@ main {
 
 /* Normalize image sizes */
 .card img {
-  width: 150px;
-  height: 150px;
+  width: 130px;
+  height: 130px;
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 10px;
@@ -185,6 +188,7 @@ footer {
 
   .card {
     width: 150px;
+    flex: 0 0 150px;
   }
 
   .card img {
@@ -199,32 +203,26 @@ footer {
   .division {
     margin-bottom: 30px;
   }
+
+  .card-container {
+    gap: 15px;
+  }
 }
 
-/* Responsive design for iPad (portrait and landscape) */
+/* Responsive design for iPad (portrait and landscape, targeting iPad Pro 11-inch) */
 @media (min-width: 601px) and (max-width: 1024px) {
   .card-container {
-    gap: 30px; /* Consistent gap */
-    max-width: 660px; /* Fits 2 cards (200px each) + gap */
+    gap: 20px;
   }
 
   .card {
-    width: 200px;
-    flex: 0 0 calc(50% - 15px); /* 2 cards per row (50% width minus half the gap) */
-  }
-
-  /* Force 2x3 layout: 2 cards in first row, 3 in second row */
-  .card:nth-child(-n+2) {
-    flex: 0 0 calc(50% - 15px); /* First two cards take 50% each */
-  }
-
-  .card:nth-child(n+3):nth-child(-n+5) {
-    flex: 0 0 calc(33.33% - 20px); /* Next three cards take 33.33% each */
+    width: 180px;
+    flex: 0 0 180px;
   }
 
   .card img {
-    width: 150px;
-    height: 150px;
+    width: 130px;
+    height: 130px;
   }
 
   .controls {
@@ -243,17 +241,16 @@ footer {
 /* Larger screens */
 @media (min-width: 1025px) {
   .card-container {
-    gap: 40px;
-    max-width: 1000px;
+    gap: 25px;
   }
 
   .card {
-    width: 200px;
-    flex: 0 0 calc(20% - 32px); /* 5 cards per row on large screens */
+    width: 180px;
+    flex: 0 0 180px;
   }
 
   .card img {
-    width: 150px;
-    height: 150px;
+    width: 130px;
+    height: 130px;
   }
 }
