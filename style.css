@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Calisto MT", serif; /* Changed to Calisto MT font */
   background-color: #f5f7fa;
   color: #333;
   line-height: 1.6;
@@ -75,8 +75,8 @@ main {
 
 /* Section styling */
 .division {
-  max-width: 900px; /* Adjusted for iPad Pro 11-inch */
-  margin: 0 auto 50px auto; /* Spacing between sections */
+  max-width: 900px;
+  margin: 0 auto 50px auto;
   padding: 0 10px;
 }
 
@@ -96,11 +96,11 @@ main {
 /* Card container */
 .card-container {
   display: flex;
-  flex-wrap: nowrap; /* Prevent wrapping for horizontal scrolling */
-  gap: 20px; /* Space between cards */
-  overflow-x: auto; /* Enable horizontal scrolling */
-  scroll-snap-type: x mandatory; /* Smooth snapping behavior */
-  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  flex-wrap: nowrap;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
   padding: 0 10px;
   width: 100%;
   min-height: 200px;
@@ -115,9 +115,9 @@ main {
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   padding: 15px;
-  width: 180px; /* Fixed width for cards */
-  flex: 0 0 180px; /* Prevent cards from stretching */
-  scroll-snap-align: start; /* Snap cards to start of viewport */
+  width: 180px;
+  flex: 0 0 180px;
+  scroll-snap-align: start;
   text-align: center;
   transition: transform 0.2s;
 }
