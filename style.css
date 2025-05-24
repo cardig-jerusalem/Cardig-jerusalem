@@ -1,40 +1,47 @@
 body {
   margin: 0;
   font-family: Georgia, serif;
-  background: #f5f8fc;
+  background: #f5f7fa;
   color: #092952;
 }
 
-header {
+header, footer {
   background-color: #092952;
   color: white;
-  padding: 20px;
+  padding: 1rem;
   text-align: center;
 }
 
-h2 {
-  text-align: center;
-  color: #092952;
-  margin-top: 40px;
+main {
+  padding: 2rem;
+}
+
+.division {
+  margin-bottom: 4rem;
+}
+
+.division h2 {
+  border-bottom: 2px solid #092952;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .card-container {
   display: flex;
   flex-wrap: wrap;
+  gap: 1.5rem;
   justify-content: center;
-  padding: 20px;
-  gap: 20px;
 }
 
 .card {
   background: white;
   border: 1px solid #ccc;
-  border-radius: 10px;
+  border-radius: 8px;
   width: 250px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   text-align: center;
-  padding: 20px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s;
 }
 
 .card:hover {
@@ -42,31 +49,35 @@ h2 {
 }
 
 .card img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 10px;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
 }
 
 .card h3 {
-  margin: 10px 0 5px;
+  font-size: 1.1rem;
+  margin: 0.5rem 0 0.2rem;
 }
 
-.card p {
-  font-size: 14px;
-  margin: 2px 0;
+.card .name {
+  font-weight: bold;
+  margin: 0.2rem 0;
 }
 
-footer {
-  background: #092952;
-  color: white;
-  text-align: center;
-  padding: 10px;
-  margin-top: 40px;
+.card a {
+  display: inline-block;
+  margin-top: 0.3rem;
+  color: #092952;
+  text-decoration: none;
+  font-size: 0.9rem;
 }
 
-@media (max-width: 600px) {
+.card a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
   .card-container {
     flex-direction: column;
     align-items: center;
