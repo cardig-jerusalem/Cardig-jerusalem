@@ -128,3 +128,55 @@ main {
   object-fit: cover; /* Ensure images fit nicely */
   display: block; /* Ensure images are not hidden */
 }
+/* Ensure the card container uses flexbox for consistent layout */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between cards */
+  justify-content: center; /* Center cards horizontally */
+}
+
+/* Style for each card */
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  width: 200px; /* Fixed width for each card */
+  text-align: center;
+}
+
+/* Normalize image sizes */
+.card img {
+  width: 150px; /* Fixed width for all images */
+  height: 150px; /* Fixed height for all images */
+  object-fit: cover; /* Scale image to cover the area, cropping if necessary */
+  border-radius: 10px; /* Optional: Add rounded corners to images */
+  margin-bottom: 10px; /* Space between image and text */
+}
+
+/* Style for text in cards */
+.card h3 {
+  font-size: 1.1em;
+  color: #1a3c5e; /* Dark blue color matching the screenshot */
+  margin: 5px 0;
+}
+
+.card .name {
+  font-size: 1em;
+  color: #333;
+  margin: 5px 0;
+}
+
+.card a {
+  font-size: 0.9em;
+  color: #666;
+  text-decoration: none;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
