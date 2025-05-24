@@ -8,31 +8,39 @@
   <script src="script.js" defer></script>
 </head>
 <body>
-  <header class="site-header">
-    <div class="site-branding">
-      <img src="images/CARDIG-WEB-HOME-LOGO.jpeg" alt="CARDIG-Jerusalem Logo" class="logo">
-      <h1 class="font-700">CARDIG-Jerusalem</h1>
+  <header class="banner">
+    <div class="banner-content">
+      <img src="/images/CARDIG-WEB-HOME-LOGO.jpeg" alt="CARDIG-Jerusalem Logo" class="banner-logo">
+      <h1 class="banner-title">Cardiology Interest Group <em>of</em> Jerusalem</h1>
     </div>
+    <div class="global-search">
+      <input type="text" id="global-search" placeholder="Search the website..." />
+    </div>
+  </header>
+
+  <header class="site-header">
     <nav class="navbar-custom">
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="team.html">Team</a></li>
-        <li><a href="cardioscience.html">Cardioscience</a></li>
-        <li><a href="cardiosupport.html">Cardiosupport</a></li>
-        <li><a href="events.html">Events</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="about.html">About Us</a></li>
+        <li><a href="#home" data-section="home">Home</a></li>
+        <li><a href="#team-section" data-section="team-section">Team</a></li>
+        <li><a href="#cardioscience-section" data-section="cardioscience-section">Cardioscience</a></li>
+        <li><a href="#cardiosupport-section" data-section="cardiosupport-section">Cardiosupport</a></li>
+        <li><a href="#events-section" data-section="events-section">Events</a></li>
+        <li><a href="#contact-section" data-section="contact-section">Contact</a></li>
+        <li><a href="#about-section" data-section="about-section">About Us</a></li>
       </ul>
     </nav>
+    <div class="welcome-text">Welcome</div>
   </header>
 
   <main class="section">
-    <section class="division hero">
+    <!-- Home Section -->
+    <section class="division hero" id="home">
       <h2 class="section-title">Welcome to CARDIG-Jerusalem</h2>
       <p class="intro">Empowering cardiology through education and innovation.</p>
       <div class="buttons">
         <a href="#mission" class="btn btn-black mt20">Learn More</a>
-        <a href="contact.html" class="btn btn-white mt20">Contact Us</a>
+        <a href="#contact-section" class="btn btn-white mt20">Contact Us</a>
       </div>
     </section>
     <section class="division" id="mission">
@@ -44,9 +52,63 @@
         <li>Values: Integrity, collaboration, and excellence.</li>
       </ul>
       <div class="buttons">
-        <a href="team.html" class="btn btn-black mt20">Meet the Team</a>
-        <a href="events.html" class="btn btn-white mt20">View Events</a>
-        <a href="contact.html" class="btn btn-black mt20">Join Us</a>
+        <a href="#team-section" class="btn btn-black mt20">Meet the Team</a>
+        <a href="#events-section" class="btn btn-white mt20">View Events</a>
+        <a href="#contact-section" class="btn btn-black mt20">Join Us</a>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="division" id="team-section">
+      <h2 class="section-title">Our Team</h2>
+      <p>Meet the dedicated members of CARDIG-Jerusalem who drive our mission forward.</p>
+      <div class="buttons">
+        <a href="/team.html" class="btn btn-black mt20">View Full Team</a>
+      </div>
+    </section>
+
+    <!-- Cardioscience Section -->
+    <section class="division" id="cardioscience-section">
+      <h2 class="section-title">Cardioscience Division</h2>
+      <p>Focused on advancing cardiology education, research, and skills development.</p>
+      <div class="buttons">
+        <a href="/cardioscience.html" class="btn btn-black mt20">Learn More</a>
+      </div>
+    </section>
+
+    <!-- Cardiosupport Section -->
+    <section class="division" id="cardiosupport-section">
+      <h2 class="section-title">Cardiosupport Division</h2>
+      <p>Supporting our community through projects, branding, and technical initiatives.</p>
+      <div class="buttons">
+        <a href="/cardiosupport.html" class="btn btn-black mt20">Learn More</a>
+      </div>
+    </section>
+
+    <!-- Events Section -->
+    <section class="division" id="events-section">
+      <h2 class="section-title">Upcoming Events</h2>
+      <p>Join us for workshops, seminars, and more to enhance your cardiology knowledge.</p>
+      <div class="buttons">
+        <a href="/events.html" class="btn btn-black mt20">View Events</a>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="division" id="contact-section">
+      <h2 class="section-title">Contact Us</h2>
+      <p>Get in touch with us for inquiries, collaborations, or to join our group.</p>
+      <div class="buttons">
+        <a href="/contact.html" class="btn btn-black mt20">Contact Form</a>
+      </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="division" id="about-section">
+      <h2 class="section-title">About Us</h2>
+      <p>Learn more about CARDIG-Jerusalem and our journey in advancing cardiovascular health.</p>
+      <div class="buttons">
+        <a href="/about.html" class="btn btn-black mt20">Read More</a>
       </div>
     </section>
   </main>
