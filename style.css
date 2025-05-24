@@ -1,142 +1,103 @@
-body {
+/* Reset default margins and ensure full-width layout */
+* {
   margin: 0;
-  font-family: Georgia, serif;
-  background: #f5f7fa;
-  color: #092952;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-header, footer {
-  background-color: #092952;
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f7fa; /* Light background to match screenshot */
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header styling */
+header {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #1a3c5e; /* Dark blue background for header */
   color: white;
-  padding: 1rem;
-  text-align: center;
 }
 
-main {
-  padding: 2rem;
+header h1 {
+  font-size: 2em;
 }
 
-.division {
-  margin-bottom: 4rem;
-}
-
-.division h2 {
-  border-bottom: 2px solid #092952;
-  padding-bottom: 0.5rem;
-  margin-bottom: 1rem;
-}
-
-.card-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  justify-content: center;
-}
-
-.card {
-  background: white;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  width: 250px;
-  padding: 1rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  text-align: center;
-  transition: transform 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
-.card img {
-  width: 100%;
-  height: auto;
-  border-radius: 6px;
-  margin-bottom: 0.5rem;
-}
-
-.card h3 {
-  font-size: 1.1rem;
-  margin: 0.5rem 0 0.2rem;
-}
-
-.card .name {
-  font-weight: bold;
-  margin: 0.2rem 0;
-}
-
-.card a {
-  display: inline-block;
-  margin-top: 0.3rem;
-  color: #092952;
-  text-decoration: none;
-  font-size: 0.9rem;
-}
-
-.card a:hover {
-  text-decoration: underline;
-}
-
-@media (max-width: 768px) {
-  .card-container {
-    flex-direction: column;
-    align-items: center;
-  }
-}
+/* Controls (Filters + Search) */
 .controls {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  margin: 2rem;
-  gap: 1rem;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 10px;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .filters {
   display: flex;
-  gap: 0.5rem;
+  gap: 10px;
 }
 
 .filter-btn {
-  background-color: white;
-  border: 2px solid #092952;
-  color: #092952;
-  padding: 0.4rem 1rem;
+  padding: 8px 16px;
+  border: none;
   border-radius: 5px;
+  background-color: #e0e7f0;
   cursor: pointer;
-  font-family: Georgia, serif;
-  font-weight: bold;
-  transition: background 0.3s;
+  font-size: 1em;
+  transition: background-color 0.3s;
 }
 
-.filter-btn.active,
-.filter-btn:hover {
-  background-color: #092952;
+.filter-btn.active {
+  background-color: #1a3c5e;
   color: white;
 }
 
+.filter-btn:hover {
+  background-color: #d0d7e0;
+}
+
 #search {
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  border: 1px solid #aaa;
+  padding: 8px;
+  border: 1px solid #ccc;
   border-radius: 5px;
-  width: 250px;
+  font-size: 1em;
+  width: 200px;
 }
-.card img {
-  width: 150px; /* Adjust size as needed */
-  height: 150px;
-  object-fit: cover; /* Ensure images fit nicely */
-  display: block; /* Ensure images are not hidden */
+
+/* Main content */
+main {
+  padding: 20px 0;
 }
-/* Ensure the card container uses flexbox for consistent layout */
+
+/* Section styling */
+.division {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.division h2 {
+  font-size: 1.8em;
+  color: #1a3c5e;
+  border-bottom: 2px solid #1a3c5e;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+/* Card container */
 .card-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px; /* Space between cards */
+  gap: 20px;
   justify-content: center; /* Center cards horizontally */
+  margin: 0 auto;
 }
 
-/* Style for each card */
+/* Card styling */
 .card {
   display: flex;
   flex-direction: column;
@@ -145,23 +106,28 @@ main {
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   padding: 15px;
-  width: 200px; /* Fixed width for each card */
+  width: 200px;
   text-align: center;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
 }
 
 /* Normalize image sizes */
 .card img {
-  width: 150px; /* Fixed width for all images */
-  height: 150px; /* Fixed height for all images */
-  object-fit: cover; /* Scale image to cover the area, cropping if necessary */
-  border-radius: 10px; /* Optional: Add rounded corners to images */
-  margin-bottom: 10px; /* Space between image and text */
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
 
-/* Style for text in cards */
+/* Card text styling */
 .card h3 {
   font-size: 1.1em;
-  color: #1a3c5e; /* Dark blue color matching the screenshot */
+  color: #1a3c5e;
   margin: 5px 0;
 }
 
@@ -179,4 +145,46 @@ main {
 
 .card a:hover {
   text-decoration: underline;
+}
+
+/* Footer styling */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #1a3c5e;
+  color: white;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .controls {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .filters {
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  #search {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .card {
+    width: 150px;
+  }
+
+  .card img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .division h2 {
+    font-size: 1.5em;
+  }
 }
