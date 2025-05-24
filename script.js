@@ -65,7 +65,10 @@ document.addEventListener("DOMContentLoaded", function () {
       console.log("Button clicked:", this.textContent, "href:", href);
       if (href) {
         if (href.startsWith("#")) {
-          document.querySelector(href).scrollIntoView({ behavior: "smooth" });
+          const section = document.querySelector(href);
+          if (section) {
+            section.scrollIntoView({ behavior: "smooth" });
+          }
         } else {
           window.location.href = href;
         }
@@ -77,7 +80,10 @@ document.addEventListener("DOMContentLoaded", function () {
       console.log("Touch button clicked:", this.textContent, "href:", href);
       if (href) {
         if (href.startsWith("#")) {
-          document.querySelector(href).scrollIntoView({ behavior: "smooth" });
+          const section = document.querySelector(href);
+          if (section) {
+            section.scrollIntoView({ behavior: "smooth" });
+          }
         } else {
           window.location.href = href;
         }
@@ -85,32 +91,60 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // NAVIGATION LINKS HANDLING WITH SMOOTH SCROLL
+  // NAVIGATION LINKS HANDLING WITH SMOOTH SCROLL OR NAVIGATION
   const navLinks = document.querySelectorAll(".nav-links a");
+  const isHomepage = window.location.pathname === "/index.html" || window.location.pathname === "/";
+
   navLinks.forEach(link => {
     link.addEventListener("click", function (event) {
       event.preventDefault();
       const sectionId = this.getAttribute("data-section");
-      console.log("Nav link clicked:", this.textContent, "section:", sectionId);
-      if (sectionId) {
+      const href = this.getAttribute("href");
+      console.log("Nav link clicked:", this.textContent, "section:", sectionId, "href:", href);
+
+      // If on homepage and section exists, scroll to it
+      if (isHomepage && sectionId) {
         const section = document.getElementById(sectionId);
         if (section) {
           section.scrollIntoView({ behavior: "smooth" });
+          return;
         }
       }
+
+      // Otherwise, navigate to the href
+      if (href) {
+        window.location.href = href;
+      }
     });
+
     link.addEventListener("touchstart", function (event) {
       event.preventDefault();
       const sectionId = this.getAttribute("data-section");
-      console.log("Nav touch clicked:", this.textContent, "section:", sectionId);
-      if (sectionId) {
+      const href = this.getAttribute("href");
+      console.log("Nav touch clicked:", this.textContent, "section:", sectionId, "href:", href);
+
+      if (isHomepage && sectionId) {
         const section = document.getElementById(sectionId);
         if (section) {
           section.scrollIntoView({ behavior: "smooth" });
+          return;
         }
+      }
+
+      if (href) {
+        window.location.href = href;
       }
     });
   });
+
+  // Handle hash-based navigation on page load
+  if (isHomepage && window.location.hash) {
+    const sectionId = window.location.hash.substring(1); // Remove the "#"
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  }
 
   // CARD CLICK FEEDBACK
   const cards = document.querySelectorAll(".card");
@@ -128,7 +162,6 @@ document.addEventListener("DOMContentLoaded", function () {
       const searchTerm = this.value.toLowerCase();
       console.log("Global search term:", searchTerm);
 
-      // Define searchable content (simulated for now)
       const searchableContent = [
         { title: "Team", url: "/team.html", keywords: "team executive board cardioscience cardiosupport" },
         { title: "Cardioscience Division", url: "/cardioscience.html", keywords: "cardioscience education research skills" },
@@ -138,7 +171,6 @@ document.addEventListener("DOMContentLoaded", function () {
         { title: "About Us", url: "/about.html", keywords: "about history mission" },
       ];
 
-      // Filter content based on search term
       const matches = searchableContent.filter(item =>
         item.title.toLowerCase().includes(searchTerm) ||
         item.keywords.toLowerCase().includes(searchTerm)
@@ -146,7 +178,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
       console.log("Search matches:", matches);
 
-      // For now, redirect to the first match (or display results in future)
       if (matches.length > 0) {
         window.location.href = matches[0].url;
       }
