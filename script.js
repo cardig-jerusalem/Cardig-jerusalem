@@ -32,16 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     cards.forEach(card => {
       const text = card.innerText.toLowerCase();
-      if (text.includes(searchTerm)) {
-        card.style.opacity = "1";
-        card.style.visibility = "visible";
-        card.style.height = "auto"; // Ensure card takes up space
-      } else {
-        card.style.opacity = "0";
-        card.style.visibility = "hidden";
-        card.style.height = "0"; // Collapse height but keep width for centering
-        card.style.margin = "0"; // Remove margins to avoid gaps
-      }
+      card.style.display = text.includes(searchTerm) ? "flex" : "none"; // Use display: none for hidden cards
     });
 
     // Force layout recalculation
