@@ -85,23 +85,29 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // NAVIGATION LINKS HANDLING
+  // NAVIGATION LINKS HANDLING WITH SMOOTH SCROLL
   const navLinks = document.querySelectorAll(".nav-links a");
   navLinks.forEach(link => {
     link.addEventListener("click", function (event) {
       event.preventDefault();
-      const href = this.getAttribute("href");
-      console.log("Nav link clicked:", this.textContent, "href:", href);
-      if (href) {
-        window.location.href = href;
+      const sectionId = this.getAttribute("data-section");
+      console.log("Nav link clicked:", this.textContent, "section:", sectionId);
+      if (sectionId) {
+        const section = document.getElementById(sectionId);
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth" });
+        }
       }
     });
     link.addEventListener("touchstart", function (event) {
       event.preventDefault();
-      const href = this.getAttribute("href");
-      console.log("Nav touch clicked:", this.textContent, "href:", href);
-      if (href) {
-        window.location.href = href;
+      const sectionId = this.getAttribute("data-section");
+      console.log("Nav touch clicked:", this.textContent, "section:", sectionId);
+      if (sectionId) {
+        const section = document.getElementById(sectionId);
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth" });
+        }
       }
     });
   });
@@ -114,4 +120,38 @@ document.addEventListener("DOMContentLoaded", function () {
       console.log(`You clicked on: ${name}`);
     });
   });
+
+  // GLOBAL SEARCH FUNCTIONALITY
+  const globalSearchInput = document.getElementById("global-search");
+  if (globalSearchInput) {
+    globalSearchInput.addEventListener("input", function () {
+      const searchTerm = this.value.toLowerCase();
+      console.log("Global search term:", searchTerm);
+
+      // Define searchable content (simulated for now)
+      const searchableContent = [
+        { title: "Team", url: "/team.html", keywords: "team executive board cardioscience cardiosupport" },
+        { title: "Cardioscience Division", url: "/cardioscience.html", keywords: "cardioscience education research skills" },
+        { title: "Cardiosupport Division", url: "/cardiosupport.html", keywords: "cardiosupport projects branding technical" },
+        { title: "Events", url: "/events.html", keywords: "events workshops seminars" },
+        { title: "Contact", url: "/contact.html", keywords: "contact form inquiry" },
+        { title: "About Us", url: "/about.html", keywords: "about history mission" },
+      ];
+
+      // Filter content based on search term
+      const matches = searchableContent.filter(item =>
+        item.title.toLowerCase().includes(searchTerm) ||
+        item.keywords.toLowerCase().includes(searchTerm)
+      );
+
+      console.log("Search matches:", matches);
+
+      // For now, redirect to the first match (or display results in future)
+      if (matches.length > 0) {
+        window.location.href = matches[0].url;
+      }
+    });
+  } else {
+    console.error("Global search input not found.");
+  }
 });
