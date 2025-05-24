@@ -122,3 +122,9 @@ main {
   border-radius: 5px;
   width: 250px;
 }
+.card img {
+  width: 150px; /* Adjust size as needed */
+  height: 150px;
+  object-fit: cover; /* Ensure images fit nicely */
+  display: block; /* Ensure images are not hidden */
+}
