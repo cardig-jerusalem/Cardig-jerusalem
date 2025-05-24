@@ -1,53 +1,140 @@
+/* Default Light Mode */
 body {
   font-family: Georgia, serif;
   margin: 0;
-  background-color: #f9f9f9;
-  color: #222;
+  background-color: #F0F2F5;
+  color: #1E2A44;
+  line-height: 1.6;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-header {
-  background-color: #800000;
-  color: white;
-  text-align: center;
-  padding: 20px;
+.navbar {
+  background-color: #1E2A44;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
 }
 
 .logo {
   width: 80px;
   height: 80px;
   object-fit: contain;
+  margin-right: 1rem;
 }
 
 h1 {
-  margin: 10px 0 5px;
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+}
+
+.nav-links a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  color: #F0F2F5;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.location {
+  text-align: center;
+  padding: 1rem;
+  background-color: #1E2A44;
+  color: #FFFFFF;
 }
 
 section {
-  margin: 40px auto;
-  padding: 0 20px;
+  margin: 2rem auto;
+  padding: 0 1rem;
   max-width: 1200px;
 }
 
 h2 {
-  color: #800000;
+  color: #1E2A44;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.cta-button {
+  display: block;
+  margin: 1rem auto;
+  padding: 0.75rem 1.5rem;
+  background-color: #1E2A44;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.cta-button:hover {
+  background-color: #2E3A54;
+}
+
+.mission-vision-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.mission, .vision {
+  background-color: #FFFFFF;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(30, 42, 68, 0.1);
+  max-width: 400px;
   text-align: center;
 }
 
 .card-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 1.5rem;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 1.5rem;
 }
 
 .card {
-  background-color: #fff;
+  background-color: #FFFFFF;
   border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  padding: 20px;
-  width: 220px;
+  box-shadow: 0 4px 12px rgba(30, 42, 68, 0.1);
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 220px;
   text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
 }
 
 .card img {
@@ -55,12 +142,123 @@ h2 {
   height: 100px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
+}
+
+.card a {
+  color: #1E2A44;
+  text-decoration: none;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+.github-feed {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.github-feed ul {
+  list-style: none;
+  padding: 0;
+}
+
+.github-feed li {
+  margin: 0.5rem 0;
 }
 
 footer {
-  background-color: #eee;
+  background-color: #1E2A44;
+  color: #FFFFFF;
   text-align: center;
-  padding: 20px;
+  padding: 1rem;
   font-style: italic;
+}
+
+#dark-mode-toggle {
+  background: none;
+  border: 1px solid #FFFFFF;
+  color: #FFFFFF;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #1E2A44;
+  color: #FFFFFF;
+}
+
+body.dark-mode .navbar,
+body.dark-mode .location,
+body.dark-mode footer {
+  background-color: #F0F2F5;
+  color: #1E2A44;
+}
+
+body.dark-mode .nav-links a {
+  color: #1E2A44;
+}
+
+body.dark-mode .nav-links a:hover {
+  color: #2E3A54;
+}
+
+body.dark-mode h2,
+body.dark-mode .card a {
+  color: #FFFFFF;
+}
+
+body.dark-mode .card,
+body.dark-mode .mission,
+body.dark-mode .vision {
+  background-color: #2E3A54;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .cta-button {
+  background-color: #F0F2F5;
+  color: #1E2A44;
+}
+
+body.dark-mode .cta-button:hover {
+  background-color: #FFFFFF;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #1E2A44;
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .card {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .card {
+    max-width: 180px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .card {
+    max-width: 220px;
+  }
 }
