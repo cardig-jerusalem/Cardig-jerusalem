@@ -1,15 +1,51 @@
-<main class="section">
-  <section class="division">
-    <h2 class="section-title">Contact Us</h2>
-    <form>
-      <input type="text" placeholder="Name" class="form-control mt20" required>
-      <input type="email" placeholder="Email" class="form-control mt20" required>
-      <textarea placeholder="Message" class="form-control mt20" rows="5" required></textarea>
-      <button type="submit" class="btn btn-black mt20">Send</button>
-    </form>
-    <div class="map mt20">
-      <!-- Embed Google Maps iframe here -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CARDIG-Jerusalem - Contact</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="banner">
+    <div class="banner-content">
+      <img src="/images/CARDIG-WEB-HOME-LOGO.jpeg" alt="CARDIG-Jerusalem Logo" class="banner-logo">
+      <h1 class="banner-title">Cardiology Interest Group <em>of</em> Jerusalem</h1>
     </div>
-    <p>Email: <a href="mailto:contact@cardig.me">contact@cardig.me</a></p>
-  </section>
-</main>
+    <div class="global-search">
+      <input type="text" id="global-search" placeholder="Search the website..." />
+    </div>
+  </header>
+
+  <header class="site-header">
+    <nav class="navbar-custom">
+      <ul class="nav-links">
+        <li><a href="/index.html" data-section="home">Home</a></li>
+        <li><a href="/team.html" data-section="team-section">Team</a></li>
+        <li><a href="/cardioscience.html" data-section="cardioscience-section">Cardioscience</a></li>
+        <li><a href="/cardiosupport.html" data-section="cardiosupport-section">Cardiosupport</a></li>
+        <li><a href="/events.html" data-section="events-section">Events</a></li>
+        <li><a href="/contact.html" data-section="contact-section">Contact</a></li>
+        <li><a href="/about.html" data-section="about-section">About Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="section">
+    <section class="division">
+      <h2 class="section-title">Contact Us</h2>
+      <p>This is the Contact page. Add your contact form here.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p class="site-info">© 2025 CARDIG-Jerusalem | <a href="mailto:contact@cardig.me">contact@cardig.me</a></p>
+    <ul class="social-block">
+      <li><a href="#"><i class="icon">f</i></a></li>
+      <li><a href="#"><i class="icon">t</i></a></li>
+      <li><a href="#"><i class="icon">i</i></a></li>
+    </ul>
+  </footer>
+</body>
+</html>
