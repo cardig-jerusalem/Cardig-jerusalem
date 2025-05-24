@@ -1,4 +1,4 @@
-/* Reset default margins and ensure full-width layout */
+/* Reset default styles */
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +7,7 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #f5f7fa; /* Light background to match screenshot */
+  background-color: #f5f7fa;
   color: #333;
   line-height: 1.6;
 }
@@ -16,7 +16,7 @@ body {
 header {
   text-align: center;
   padding: 20px 0;
-  background-color: #1a3c5e; /* Dark blue background for header */
+  background-color: #1a3c5e;
   color: white;
 }
 
@@ -27,7 +27,7 @@ header h1 {
 /* Controls (Filters + Search) */
 .controls {
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* Center the controls */
   align-items: center;
   max-width: 1200px;
   margin: 20px auto;
@@ -93,8 +93,10 @@ main {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  justify-content: center; /* Center cards horizontally */
-  margin: 0 auto;
+  justify-content: center; /* Ensure cards are centered */
+  margin: 0 auto; /* Center the container */
+  width: 100%; /* Ensure it takes full available width */
+  padding: 0 10px; /* Add padding to avoid edge alignment */
 }
 
 /* Card styling */
