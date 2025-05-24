@@ -2,15 +2,225 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cardiology Interest Group – Jerusalem</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CARDIG‑Jerusalem</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 2rem; background: #f9f9f9; }
-    h1 { color: #b30000; }
+    /* — Brand Colors — */
+    :root {
+      --primary: #092952;     /* Dark blue from your seal */
+      --accent: #b30000;      /* Secondary accent */
+      --light-bg: #f4f4f4;
+    }
+
+    /* — Reset & Base — */
+    * { box-sizing: border-box; margin:0; padding:0; }
+    body { font-family: Arial, sans-serif; background: var(--light-bg); color: #333; line-height:1.6; }
+    a { text-decoration:none; color:inherit; }
+
+    /* — Sticky Navigation — */
+    header { background: var(--primary); color:#fff; position: sticky; top:0; z-index:1000; }
+    header .container { display:flex; align-items:center; justify-content:space-between; padding:1rem; }
+    header img { height:50px; }
+    nav a { margin:0 0.75rem; font-weight:bold; color:#fff; }
+    nav a:hover { color: var(--accent); }
+
+    /* — Hero Banner — */
+    #hero { background: var(--primary); color:#fff; padding:4rem 1rem; text-align:center; }
+    #hero h1 { font-size:2.5rem; margin-bottom:0.5rem; }
+    #hero p { font-size:1.2rem; }
+
+    /* — Sections & Containers — */
+    section { padding:3rem 1rem; }
+    .container { max-width:1000px; margin:0 auto; }
+
+    /* — Cards & Grid — */
+    .grid { display:grid; gap:1.5rem; }
+    .cols-2 { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+    .card { background:#fff; border-radius:6px; padding:1.5rem; 
+            box-shadow:0 2px 5px rgba(0,0,0,0.1); transition: transform .3s; }
+    .card:hover { transform: translateY(-5px); }
+
+    /* — Carousel — */
+    .carousel { position: relative; overflow: hidden; }
+    .slides { display:flex; transition: transform .5s ease; }
+    .slide { min-width:100%; box-sizing:border-box; padding:1rem; background:#fff; }
+    .carousel-controls { position:absolute; top:50%; width:100%; display:flex; 
+                         justify-content:space-between; transform: translateY(-50%); }
+    .carousel-controls button { background:rgba(0,0,0,0.5); border:none; color:#fff; 
+                                padding:0.5rem; cursor:pointer; }
+
+    /* — Footer — */
+    footer { background:#222; color:#ccc; text-align:center; padding:1rem; font-size:0.9rem; }
+    .social-icons a { margin:0 0.5rem; }
+
+    /* — Smooth Scroll — */
+    html { scroll-behavior: smooth; }
+
+    @media (min-width:600px) {
+      #team .grid { grid-template-columns: repeat(3,1fr); }
+    }
   </style>
 </head>
 <body>
-  <h1>Welcome to the Cardiology Interest Group – Jerusalem</h1>
-  <p>This is the official website for our student-led cardiology group based in Jerusalem. Stay tuned for updates on events, research, and opportunities.</p>
+
+  <!-- HEADER & NAV -->
+  <header>
+    <div class="container">
+      <!-- Your extracted logo: upload logo_extracted.jpeg to repo root -->
+      <img src="logo_extracted.jpeg" alt="CARDIG‑Jerusalem Logo"/>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#governance">Governance</a>
+        <a href="#objectives">Objectives</a>
+        <a href="#team">Team</a>
+        <a href="#news">News</a>
+        <a href="#media">Media</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO BANNER -->
+  <section id="hero">
+    <div class="container">
+      <h1>Cardiology Interest Group – Jerusalem</h1>
+      <p>Empowering excellence in cardiovascular education, research, & community service.</p>
+    </div>
+  </section>
+
+  <!-- ABOUT (Preamble) -->
+  <section id="about">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>
+        “We, the esteemed founding members of the Cardiology Interest Group – Jerusalem (CARDIG‑Jerusalem), 
+        under the noble aegis of the Faculty of Medicine at Al‑Quds University and in proud affiliation with 
+        the American College of Cardiology (ACC), do hereby ordain and establish these Bylaws. Our solemn purpose 
+        is to advance the pursuit of excellence in cardiovascular education, research, clinical practice, leadership, 
+        and service to the community…”  [oai_citation:0‡CARDIG Jerusalem Charter & Bylaws Version 1.pdf](file-service://file-YS5YsuHc27ptNxJUqHbkxt)
+      </p>
+    </div>
+  </section>
+
+  <!-- GOVERNANCE -->
+  <section id="governance" style="background:#fff;">
+    <div class="container">
+      <h2>Governance Structure</h2>
+      <div class="grid cols-2">
+        <div class="card">
+          <h3>Executive Board</h3>
+          <ul>
+            <li>External President</li>
+            <li>Internal President</li>
+            <li>Vice President</li>
+            <li>Secretary General</li>
+            <li>Treasurer</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Divisions & Council</h3>
+          <ul>
+            <li>Cardioscience Division</li>
+            <li>Cardiosupport Division</li>
+            <li>Supervising Council & Faculty Advisor</li>
+          </ul>
+        </div>
+      </div>
+      <p style="margin-top:1rem;">
+        CARDIG‑Jerusalem is governed by a threefold hierarchy: Executive Board, Operational Divisions, and Supervisory Authority.  [oai_citation:1‡CARDIG Jerusalem Charter & Bylaws Version 1.pdf](file-service://file-YS5YsuHc27ptNxJUqHbkxt)
+      </p>
+    </div>
+  </section>
+
+  <!-- OBJECTIVES -->
+  <section id="objectives">
+    <div class="container">
+      <h2>Mission & Vision</h2>
+      <p><strong>Mission:</strong> “Advance the noble study, practice, and comprehension of cardiovascular medicine ... uphold the sacred ethical tenets of the medical vocation.”  [oai_citation:2‡CARDIG Jerusalem Charter & Bylaws Version 1.pdf](file-service://file-YS5YsuHc27ptNxJUqHbkxt)</p>
+      <p><strong>Vision:</strong> “Reign as the preeminent bastion of cardiovascular scholarship ... fortify bonds between students, faculty, and the global fellowship of cardiology.”  [oai_citation:3‡CARDIG Jerusalem Charter & Bylaws Version 1.pdf](file-service://file-YS5YsuHc27ptNxJUqHbkxt)</p>
+      <h3>Key Objectives</h3>
+      <ul>
+        <li>4+ learned seminars & 2 symposia each year</li>
+        <li>3+ community service acts per semester</li>
+        <li>10% annual membership growth</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section id="team" style="background:#fff;">
+    <div class="container">
+      <h2>Our Team</h2>
+      <div class="grid cols-2">
+        <div class="card"><h4>External President</h4><p>[Name]</p></div>
+        <div class="card"><h4>Internal President</h4><p>[Name]</p></div>
+        <div class="card"><h4>Vice President</h4><p>[Name]</p></div>
+        <div class="card"><h4>Secretary General</h4><p>[Name]</p></div>
+        <div class="card"><h4>Treasurer</h4><p>[Name]</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWS / ANNOUNCEMENTS CAROUSEL -->
+  <section id="news">
+    <div class="container">
+      <h2>Announcements & Events</h2>
+      <div class="carousel">
+        <div class="slides">
+          <div class="slide"><h4>June 15: Guest Lecture on Heart Failure</h4><p>Location: A203</p></div>
+          <div class="slide"><h4>June 22: Clinical Skills Workshop</h4><p>Sign‑up open now</p></div>
+          <div class="slide"><h4>Research Deadline Extended</h4><p>Submit by July 10</p></div>
+        </div>
+        <div class="carousel-controls">
+          <button id="prev">&#10094;</button>
+          <button id="next">&#10095;</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEDIA (Video Placeholder) -->
+  <section id="media" style="background:#fff;">
+    <div class="container">
+      <h2>Featured Video</h2>
+      <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden;">
+        <iframe src="" frameborder="0" allowfullscreen
+          style="position:absolute; top:0; left:0; width:100%; height:100%;"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT & FOOTER -->
+  <section id="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>📧 <a href="mailto:cardig.jerusalem@gmail.com">cardig.jerusalem@gmail.com</a></p>
+      <div class="social-icons">
+        <a href="#"><img src="" alt="Instagram" style="height:24px;"/></a>
+      </div>
+      <p>Based at Al‑Quds University, in affiliation with the American College of Cardiology.</p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Cardiology Interest Group – Jerusalem
+  </footer>
+
+  <!-- Carousel Script -->
+  <script>
+    (function() {
+      const slides = document.querySelector('.slides');
+      let idx = 0;
+      document.getElementById('next').onclick = () => {
+        idx = (idx+1) % slides.children.length;
+        slides.style.transform = `translateX(-${idx*100}%)`;
+      };
+      document.getElementById('prev').onclick = () => {
+        idx = (idx-1 + slides.children.length) % slides.children.length;
+        slides.style.transform = `translateX(-${idx*100}%)`;
+      };
+    })();
+  </script>
+
 </body>
 </html>
