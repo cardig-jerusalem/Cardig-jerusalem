@@ -1,5 +1,8 @@
 /* Import Calisto MT font (fallback to serif if unavailable) */
 @import url(http://fonts.googleapis.com/css?family=Calisto MT);
+/* Import a wavy font (e.g., Pacifico) for "Welcome" */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -31,13 +34,40 @@ p {
   margin: 0 0 30px;
 }
 
+/* Banner styling */
+.banner {
+  background-color: #1E3A8A; /* Dark blue matching the logo */
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  position: relative;
+  z-index: 3;
+}
+
+.banner-logo {
+  max-width: 150px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.banner-title {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.banner-title em {
+  font-style: italic;
+}
+
 /* Header styling */
 .site-header {
   width: 100%;
   min-height: 100vh;
   position: relative;
   text-align: center;
-  background: url(https://raw.githubusercontent.com/cardig-jerusalem/cardig-jerusalem/main/Header.jpeg) no-repeat center center/cover; /* Absolute URL for GitHub */
+  background: url(https://raw.githubusercontent.com/cardig-jerusalem/cardig-jerusalem/main/Header.jpeg) no-repeat center center/cover;
   display: table;
 }
 .site-header::before {
@@ -49,39 +79,42 @@ p {
   left: 0;
   background-color: rgba(0, 0, 0, 0.5);
 }
-.site-header .site-branding {
-  position: relative;
-  z-index: 1;
-  padding: 20px 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.site-header .logo {
-  max-width: 150px;
-  height: auto;
-  margin-right: 10px;
-}
-.site-header h1 {
-  font-size: 2em;
+.site-header .welcome-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Pacifico', cursive;
+  font-size: 4em;
   color: #fff;
-  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  animation: wave 2s ease-in-out infinite;
+  z-index: 1;
 }
 
-@media (min-width: 768px) {
-  .site-header .site-branding {
-    padding-top: 30px;
+/* Wavy animation for "Welcome" */
+@keyframes wave {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  25% { transform: translate(-50%, -50%) rotate(2deg); }
+  50% { transform: translate(-50%, -50%) rotate(0deg); }
+  75% { transform: translate(-50%, -50%) rotate(-2deg); }
+  100% { transform: translate(-50%, -50%) rotate(0deg); }
+}
+
+@media (max-width: 768px) {
+  .site-header .welcome-text {
+    font-size: 2.5em;
   }
 }
 
 /* Navigation */
 .navbar-custom {
   position: absolute;
-  top: 0;
+  top: 60px; /* Adjust to sit below banner */
   width: 100%;
   background-color: rgba(0, 0, 0, 0.8);
   padding: 10px 0;
-  z-index: 2; /* Ensure it stays above the header overlay */
+  z-index: 2;
 }
 .navbar-custom .nav-links {
   list-style-type: none;
@@ -95,9 +128,9 @@ p {
   font-size: 12px;
   font-weight: 400;
   text-decoration: none;
-  display: inline-block; /* Ensure it's a clickable area */
-  padding: 5px 10px; /* Add padding for better tap area */
-  -webkit-tap-highlight-color: transparent; /* Remove tap highlight on mobile */
+  display: inline-block;
+  padding: 5px 10px;
+  -webkit-tap-highlight-color: transparent;
 }
 .navbar-custom .nav-links li a:hover {
   color: rgba(255, 255, 255, 0.7);
@@ -107,6 +140,7 @@ p {
   .navbar-custom {
     background-color: transparent;
     padding-top: 30px;
+    top: 70px; /* Adjust for larger screens */
   }
   .navbar-custom .nav-links li a:hover {
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
@@ -366,6 +400,17 @@ footer.site-footer a:hover {
     flex-direction: column;
     gap: 10px;
   }
+
+  .banner {
+    flex-direction: column;
+    text-align: center;
+  }
+  .banner-title {
+    font-size: 1.2em;
+  }
+  .site-header .welcome-text {
+    font-size: 2em;
+  }
 }
 
 /* Responsive design for iPad (portrait and landscape, targeting iPad Pro 11-inch) */
@@ -399,6 +444,13 @@ footer.site-footer a:hover {
   .site-header .logo {
     max-width: 150px;
   }
+
+  .banner-title {
+    font-size: 1.3em;
+  }
+  .site-header .welcome-text {
+    font-size: 3em;
+  }
 }
 
 /* Larger screens */
@@ -415,6 +467,13 @@ footer.site-footer a:hover {
   .card img {
     width: 130px;
     height: 130px;
+  }
+
+  .banner-title {
+    font-size: 1.5em;
+  }
+  .site-header .welcome-text {
+    font-size: 4em;
   }
 }
 
