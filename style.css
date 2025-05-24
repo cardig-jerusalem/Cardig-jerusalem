@@ -1,67 +1,66 @@
-/* General Styles */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Georgia, serif;
   margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-  color: #333;
+  background-color: #f9f9f9;
+  color: #222;
 }
 
-/* Header */
 header {
-  background-color: #a71e34;
+  background-color: #800000;
   color: white;
-  padding: 20px 0;
+  text-align: center;
+  padding: 20px;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+h1 {
+  margin: 10px 0 5px;
+}
+
+section {
+  margin: 40px auto;
+  padding: 0 20px;
+  max-width: 1200px;
+}
+
+h2 {
+  color: #800000;
   text-align: center;
 }
 
-/* Navigation */
-nav {
-  background-color: #333;
-}
-
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.card-container {
   display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
   justify-content: center;
+  margin-top: 20px;
 }
 
-nav ul li {
-  margin: 0;
-}
-
-nav ul li a {
-  display: block;
-  padding: 15px 20px;
-  color: white;
-  text-decoration: none;
-}
-
-nav ul li a:hover {
-  background-color: #a71e34;
-}
-
-/* Main Section */
-main {
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   padding: 20px;
-}
-
-.intro, .activities {
-  background-color: white;
-  margin: 20px auto;
-  padding: 20px;
-  border-radius: 8px;
-  max-width: 800px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-/* Footer */
-footer {
+  width: 220px;
   text-align: center;
-  background-color: #222;
-  color: #ccc;
-  padding: 15px 0;
-  margin-top: 40px;
+}
+
+.card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+footer {
+  background-color: #eee;
+  text-align: center;
+  padding: 20px;
+  font-style: italic;
 }
