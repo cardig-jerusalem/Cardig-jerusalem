@@ -37,7 +37,7 @@ p {
   min-height: 100vh;
   position: relative;
   text-align: center;
-  background: url(images/Header.jpeg) no-repeat center center/cover; /* Ensure path matches */
+  background: url(https://raw.githubusercontent.com/cardig-jerusalem/cardig-jerusalem/main/Header.jpeg) no-repeat center center/cover; /* Absolute URL for GitHub */
   display: table;
 }
 .site-header::before {
@@ -81,6 +81,7 @@ p {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.8);
   padding: 10px 0;
+  z-index: 2; /* Ensure it stays above the header overlay */
 }
 .navbar-custom .nav-links {
   list-style-type: none;
@@ -94,6 +95,9 @@ p {
   font-size: 12px;
   font-weight: 400;
   text-decoration: none;
+  display: inline-block; /* Ensure it's a clickable area */
+  padding: 5px 10px; /* Add padding for better tap area */
+  -webkit-tap-highlight-color: transparent; /* Remove tap highlight on mobile */
 }
 .navbar-custom .nav-links li a:hover {
   color: rgba(255, 255, 255, 0.7);
